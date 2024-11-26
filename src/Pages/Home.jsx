@@ -289,7 +289,7 @@ const Home = () => {
       {/* Placeholder for Other Sections */}
       <div className="bg-gray-100 w-[1380px] h-[400px] ml-[5rem] mt-[4rem] rounded-[16px]">
         <div className=""> </div>
-        <img src="/src/assets/img/summer_advert.png " className="h-[400px] ml-[30rem] rounded-[16px] w-[900px]"/>
+        <img src="src/assets/img/summer_advert.png" className="h-[400px] ml-[30rem] rounded-[16px] w-[900px]"/>
       </div>
       <h1 className="mt-[4.6rem] text-[40px] font-semibold ml-[5rem] font-poppins">Browse by category</h1>
       <div className="flex">
