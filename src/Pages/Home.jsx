@@ -102,7 +102,7 @@ const Home = () => {
             <div className="flex bg-[#882BEC] w-screen h-[650px] ">
 <div className="mt-[6rem]">
 
-    <span className="ml-[7rem] font-alfa-slab text-[128px] font-regular  text-[#FFFFFF]">Gebeya</span>
+    <span className="ml-[7rem] font-alfa-slab text-[122px] font-regular  text-[#FFFFFF]">Gebeya</span>
 <img src="/img/shoee.jpeg" className="ml-[13.75rem] mt-[1rem] w-[210px] h-[210px] rounded-full"/>
 </div>
 <div>
@@ -111,7 +111,7 @@ const Home = () => {
 </div>
 <div className="block ml-[4rem] mr-[6rem] mt-[5rem]">
 <span className=" text-[#FFFFFF] font-poppins font-regular w-[320px] text-[20px] leading-[32px] ">Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service.<br/></span>
-<span className=" mt-[-1rem] text-[128px] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
+<span className=" mt-[-1rem] text-[122px] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
 <img src="/img/shirt.jpeg" className="w-[183px] h-[183px] rounded-full ml-[4rem]"/>
 </div>
             </div>
@@ -119,7 +119,7 @@ const Home = () => {
                 <div className="flex">
                 <div><h1 className="mt-[4.6rem] text-[32px] font-poppins font-semibold ml-[5rem]">Latest Collections</h1></div>
               <div className="flex ml-[63rem] mt-[7rem]">
-                <button className="flex  rounded-[16px] py-[0px] w-[82px] h-[28px] space-x-[22px]">
+                <button className="flex  rounded-[16px] py-[0px] w-[82px] h-[22px] space-x-[22px]">
                     <img src="/icons/left.png " className="px-[1px] bg-[#FEA301] h-[27px]  rounded-l-[16px]"/>
                     <img src="/icons/rignt.png" className="px-[3px] bg-[#FEA301] h-[27px] rounded-r-[16px]"/>
                    
@@ -134,7 +134,7 @@ const Home = () => {
                        <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
                    <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
                     </div>
-                    <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]"><img src="/img/French_kiss_bag.png" className="w-[180px] h-[180px]"/></div>
+                    <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]"><img src="/img/french_kiss_bag.png" className="w-[180px] h-[180px]"/></div>
                   
                     </div>
                     <div className="flex">
@@ -287,19 +287,93 @@ const Home = () => {
       </div>
 
       {/* Placeholder for Other Sections */}
-      <div className="bg-gray-100 w-[1380px] h-[400px] ml-[5rem] mt-[4rem] rounded-[16px]">
-        <div className=""> </div>
-        <img src="/summer_advert.png" className="h-[400px] ml-[30rem] rounded-[16px] w-[900px]"/>
+      <div className=" bg-[#D0D0D0] w-[1380px] h-[400px] ml-[5rem] mt-[4rem] rounded-[16px]">
+        
+        <div className="flex"><div className=" ml-[3rem] mt-[1rem]"> 
+<div className="font-poppins font-semibold text-white text-[40px]  w-[450px]">Our Curated Summer Collection</div>
+<div className="font-poppins font-regular text-[16px]  w-[360px] leading-[26px] text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
+      <button className="bg-[#FEA301] mt-[2rem] h-[38px] w-[160px] rounded-[12px] text-white">Explore Now</button>
+        </div>
+    
+        <div><img src="/summer_advert.png" className="h-[400px]  rounded-[16px] w-[1150px] ml-[rem]"/></div>
+      </div>
+      <div>
+        <div className="w-[10px] h-[10px] rounded-full bg-[#FFD700]  mt-[-23.5rem] ml-[35.6rem]"></div>
+
+          <div className="w-[22px] h-[22px] rounded-full bg-primary mt-[2.6rem] ml-[66rem]"></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-primary mt-[0.6rem] ml-[46rem]  "></div>
+          <div className="flex mt-[6rem] ml-[33.4rem]">    <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%]  "></div>
+          <div className="w-[26px] h-[26px] rounded-full bg-[#FFD700] ml-[12rem] "></div>
+          </div> <div className="w-[22px] h-[22px] rounded-full bg-primary ml-[29rem] mt-[5rem] ml-[42rem]  "></div>
+          <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] ml-[58rem] "></div>
+       
+        </div>
       </div>
       <h1 className="mt-[4.6rem] text-[40px] font-semibold ml-[5rem] font-poppins">Browse by category</h1>
       <div className="flex">
-        <div className="w-[320px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[5rem] mt-[2.7rem] rounded-[18px]"></div>
-        <div className="w-[320px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"></div>
-        <div className="w-[320px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"></div>
-        <div className="w-[320px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"></div>
-    
+        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[5rem] mt-[2.7rem] rounded-[18px]">
+          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+          <img src="img/casual_shirt.png" className="py-[8px] px-[46px]"/></div>
+          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Casual Wear</div>
+          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 20 categories in stock</div>
+        </div>
+        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
+          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+          <img src="img/vintage_dress.png" className="py-[1px] px-[46px]"/></div>
+          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]">Vintage</div>
+          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 31 categories in stock</div>
+        </div> <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
+          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+          <img src="img/beauty_products.png" className="py-[30px] px-[46px]"/></div>
+          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Beauty products</div>
+          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 24 categories in stock</div>
+        </div>
+        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
+          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+          <img src="img/gym_wears (2).png" className="py-[8px] px-[46px]"/></div>
+          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Gym wears</div>
+          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 62 categories in stock</div>
+        </div>
       </div>
-      <div className="w-full h-[270px] bg-primary"></div>
+      {/*Footer section */}
+      <div className="w-full h-[70px] bg-primary flex">
+        <div>
+            <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
+            <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
+                <img src="/icons/insta.png" className="w-[22px] h-[22px]"/>
+                <img src="/icons/whatsapp.png" className="w-[26px] h-[26px]"/>
+                <img src="/icons/x.png" className="w-[24px] h-[24px] mt-[0.1rem]"/>
+            </div>
+        </div>
+        <div className="flex space-x-[68px] mt-[5rem] ml-[44rem]  ">
+        <div >
+            <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">About</li>
+                <li>About Us</li>
+                <li>News & Blog</li>
+                <li>Location</li>
+            </ul>
+        </div>
+        <div>
+        <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">Products</li>
+                <li>Pricing</li>
+                <li>Store</li>
+                <li>Features</li>
+            </ul>
+        </div>
+        <div>
+        <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">Discover</li>
+                <li>Contact Us</li>
+                <li>Customers</li>
+                <li>Affiliates</li>
+            </ul>
+        </div>
+        </div>
+        
+
+      </div>
     </div>
 
       {/* See More Button

@@ -18,7 +18,7 @@ const Navbar = () => {
         < div className="bg-[#FFFFFF] w-screen h-[4.1rem] space-x-[2.75rem]">
         <div className="flex bg-[#FFFFFF] w-[1352px] h-[46.5px] ml-[5rem] mr-[5rem] mt-[1.5rem] mb-[1.22rem]">
 <div>
-<img src="/src/assets/img/image.png" className="w-[32px] h-[32px] mt-[0.45rem]"/>
+<img src="/img/image.png" className="w-[32px] h-[32px] mt-[0.45rem]"/>
 </div>
 <div className=" flex mt-[0.7rem] mt-[0.7rem] ml-[4.75rem] ">
 <ul class="flex space-x-[24px]">
@@ -27,9 +27,9 @@ const Navbar = () => {
             className="flex w-[165px] h-[24px]" 
             onClick={toggleDropdown}
           >
-            <img src="/src/assets/icons/vector.png" className="mr-[0.37rem] mb-[0.37rem] mt-[0.33rem] w-[12px] h-[12.67px]"/>
+            <img src="/icons/vector.png" className="mr-[0.37rem] mb-[0.37rem] mt-[0.33rem] w-[12px] h-[12.67px]"/>
           <span className=" font-poppins text-[16px] text-[#1E1E1E]/[100%]"> Register/Sign In</span>
-          <img src={isOpen ? "/src/assets/icons/up.png" : "/src/assets/icons/down.png"} className="w-[16px] h-[16px] mt-[0.25rem] text-[#1E1E1E]/[100%]"/>
+          <img src={isOpen ? "/icons/up.png" : "/icons/down.png"} className="w-[16px] h-[16px] mt-[0.25rem] text-[#1E1E1E]/[100%]"/>
           
            
           </button>
@@ -60,7 +60,7 @@ const Navbar = () => {
           >
            <li className="w-[40px] h-[24px] font-poppins text-[16px] text-[#1E1E1E]"> More</li>
           
-            <img src={isMoreOpen ? "/src/assets/icons/up.png" : "src/assets/icons/down.png"} className="mt-[4px] "/>
+            <img src={isMoreOpen ? "/icons/up.png" : "src/assets/icons/down.png"} className="mt-[4px] "/>
           </button>
 
           {/* Dropdown Menu */}
@@ -142,14 +142,14 @@ const Navbar = () => {
           <div className="rounded-r-[16px] w-[78px] h-[40px] space-x-[10px] ml-[1rem]  bg-[#882BEC] "><img src="src/assets/icons/search.png" className="ml-[23px] mt-[8px] w-[20.28px] h-[20.28px] invert space-x-4 opacity-100"/></div>
         </div> 
         <div className="flex w-[149px] h-[24px] space-x-[4px] ml-[2.75rem] mt-[11.25px]">
-         <img src="/src/assets/icons/uk.png" className="w-[24px] h-[24px]"/>
+         <img src="/icons/uk.png" className="w-[24px] h-[24px]"/>
           <div className=" ml-[28px] font-poppins font-regular text-[16px] text-[#1E1E1E]">EN/Currency</div>
-          <img src="/src/assets/icons/down.png" className="w-[16px] h-[16px] mt-[4px]"/>
+          <img src="/icons/down.png" className="w-[16px] h-[16px] mt-[4px]"/>
           
         </div>    
         <div className="ml-[2.75rem] bg-[#FEA301]">
         <a href="/cart" className="bg-[#FEA301]">
-            <img src="/src/assets/icons/cart.png" alt="Cart" className="w-[47px] h-[46.5px] rounded-full " />
+            <img src="/icons/cart.png" alt="Cart" className="w-[47px] h-[46.5px] rounded-full " />
           </a>
         </div>
        
