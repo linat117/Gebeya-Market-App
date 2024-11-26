@@ -1,7 +1,6 @@
 import { useState } from "react";
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const [MoredropdownOpen, setMoreDropdownOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
@@ -41,14 +40,14 @@ const Navbar = () => {
               dropdownOpen ? "block" : "hidden"
             } group-hover:block`}
           >
-              <li className="h-[44px] py-[10px] "><a href="#" className=" ml-[4rem] mt-[1.6rem] font-poppins text-[16px] font-medium text-[#000000] h-[24px]">Register</a></li>
+              <li className="h-[44px] py-[10px] "><a href="/Home" className=" ml-[4rem] mt-[1.6rem] font-poppins text-[16px] font-medium text-[#000000] h-[24px]">Register</a></li>
               <hr className="w-[127px] ml-[2.06rem] text-[#C1C1C1] mt-[0.62rem]"/>
               <li className="h-[44px] py-[10px]"><a href="#" className="ml-[4.37rem] font-poppins text-[16px] font-medium text-[#000000]">Sign In</a></li>
               </div>
           )}
          
         </li>
-            <li><a href="#" className=" font-poppins text-[16px]  font-semibold text-[#1E1E1E]/[100%]">Home</a></li>
+            <li><a href="/" className=" font-poppins text-[16px]  font-semibold text-[#1E1E1E]/[100%]">Home</a></li>
             <li><a href="#" className="font-poppins text-[16px] font-normal text-[#1E1E1E]/[100%]">Men</a></li>
             <li><a href="#" className="font-poppins text-[16px] font-normal text-[#1E1E1E]/[100%]">Women</a></li>
             <li><a href="#" className="font-poppins text-[16px] font-normal text-[#1E1E1E]/[100%]">Kids</a></li>

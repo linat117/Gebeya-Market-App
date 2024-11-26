@@ -1,6 +1,33 @@
 import { useState } from "react";
 import Navbar from "../Components/Navbar";
+import { useNavigate } from "react-router-dom";
+
+const products =[
+  {
+    id: 1,
+    images: ["img/french_kiss_bag.png", "img/Burberry_Shine.png","img/Alvero_Gown.png", "img/Product2Two.png"],
+    name: "French Kiss Bag",
+    description: "ALDO",
+    price: "$500",
+  },
+  
+  {
+    id: 2,
+    images: ["img/Burberry_Shine.png", "img/product2Side.png", "img/Product2Two.png", "img/french_kiss_bag.png"],
+    name: "Burberry shine",
+    description: "FENDI",
+    price: "$150",
+  },
+  {
+    id: 3,
+    images: ["img/Alvero_Gown.png", "img/product2Side.png", "img/Product2Two.png", "img/french_kiss_bag.png"],
+    name: "Alvero Gown",
+    description: "Divine",
+    price: "$300",
+  }
+      ];
 const Home = () => {
+  const navigate = useNavigate();
     const [activeCategory, setActiveCategory] = useState("Men");
 
     // Example data for each category (including image and description)
@@ -92,11 +119,15 @@ const Home = () => {
         { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
       ],
     };
-  
-    // Function to handle category change
-    const changeCategory = (category) => {
+     // Function to handle category change
+     const changeCategory = (category) => {
       setActiveCategory(category);
     };
+    const handleAddToCart = (product) => {
+      navigate("/CartPage", { state: { product } });
+    };
+  
+   
     return ( 
         <>
         <Navbar/>
@@ -129,95 +160,71 @@ const Home = () => {
                 
                 </div>
                 </div>
-                <div className="flex">
-                    <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[5rem] mt-[2.7rem] rounded-[18px]">
-                        <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
-                      <div className="flex">
-                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
-                   <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
-                    </div>
-                    <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]"><img src="/img/french_kiss_bag.png" className="w-[180px] h-[180px]"/></div>
-                  
-                    </div>
-                    <div className="flex">
-                    <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Women</button></div> 
-                    <div className="flex ml-[17.5rem]">
-                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
-                        <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">2K+ rating</button></div> 
-                        
-                        </div> 
-                   
-                    </div>
-                    <div className="ml-[0.6rem] mt-[0.8rem]">
-                        <span className="font-poppins font-semibold text-[#1E1E1E] ">French Kiss Bag</span>
-                        <p className="text-[#808080] font-poppins text-[12px] font-medium">ALDO</p>
-                    </div>
-                    <div className="flex mt-[2rem] ml-[0.6rem]">
-                        <span className="font-poppins font-semibold mt-[0.5rem]">$500</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
-                    </div>
-                    </div>
-                    
-                    <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
-                        <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
-                      <div className="flex">
-                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
-                   <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
-                    </div>
-                    <div className="ml-[2rem] mt-[-6rem] py-[68px] px-[92px]"><img src="/img/Burberry_Shine.png" className="w-[180px] h-[180px]"/></div>
-                  
-                    </div>
-                    <div className="flex">
-                    <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Kids</button></div> 
-                    <div className="flex ml-[17.5rem]">
-                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
-                        <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">1K+ rating</button></div> 
-                        
-                        </div> 
-                   
-                    </div>
-                    <div className="ml-[0.6rem] mt-[0.8rem]">
-                        <span className="font-poppins font-semibold text-[#1E1E1E] ">Burberry shine</span>
-                        <p className="text-[#808080] font-poppins text-[12px] font-medium">FENDI</p>
-                    </div>
-                    <div className="flex mt-[2rem] ml-[0.6rem]">
-                        <span className="font-poppins font-semibold mt-[0.5rem]">$150</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
-                    </div>
-                    </div>
-                    <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
-                        <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
-                      <div className="flex">
-                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
-                   <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
-                    </div>
-                    <div className="ml-[3rem] mt-[-7.5rem] py-[92px] px-[92px]"><img src="/img/Alvero_Gown.png" className="w-[130px] h-[120px"/></div>
-                  
-                    </div>
-                    <div className="flex">
-                    <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Women</button></div> 
-                    <div className="flex ml-[17.5rem]">
-                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
-                        <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">5K+ rating</button></div> 
-                        
-                        </div> 
-                   
-                    </div>
-                    <div className="ml-[0.6rem] mt-[0.8rem]">
-                        <span className="font-poppins font-semibold text-[#1E1E1E] ">Alvero Gown</span>
-                        <p className="text-[#808080] font-poppins text-[12px] font-medium">DIVINE</p>
-                    </div>
-                    <div className="flex mt-[2rem] ml-[0.6rem]">
-                        <span className="font-poppins font-semibold mt-[0.5rem]">$300</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
-                    </div>
-                    </div>
-                    <div>
-                        
-                    </div>
-                   
-                </div>
+                <div className="flex ml-[3rem]">
+      {products.map((product) => (
+        <div
+          key={product.id}
+          className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"
+        >
+          <div className="w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] mr-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
+            <div className="flex">
+              <div>
+                <img
+                  src="/icons/heart.png"
+                  className="ml-[0.8rem] py-[10px] border border-white rounded-full px-[10px] bg-white"
+                  alt="Heart icon"
+                />
+              </div>
+              <div>
+                <button className="w-[70px] h-[30px] bg-white ml-[18rem] rounded-[16px] text-[12px]">
+                  In Stock
+                </button>
+              </div>
             </div>
+            <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]">
+              <img
+                src={product.images[0] || "img/french_kiss_bag.png"}
+                alt={product.name}
+                className="w-[180px] h-[180px]"
+              />
+            </div>
+          </div>
+          <div className="flex">
+            <div>
+              <button className="w-[60px] h-[25px] bg-white ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">
+                Women
+              </button>
+            </div>
+            <div className="flex ml-[17.5rem]">
+              <div>
+                <img src="/icons/star1.png" className="py-[12px]" alt="Star icon" />
+              </div>
+              <div>
+                <button className="h-[25px] bg-white ml-[0rem] text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">
+                  2K+ rating
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="ml-[0.6rem] mt-[0.8rem]">
+            <span className="font-poppins font-semibold text-[#1E1E1E]">{product.name}</span>
+            <p className="text-[#808080] font-poppins text-[12px] font-medium">
+              {product.description}
+            </p>
+          </div>
+          <div className="flex mt-[2rem] ml-[0.6rem]">
+            <span className="font-poppins font-semibold mt-[0.5rem]">{product.price}</span>
+            <button
+              onClick={() => handleAddToCart(product)}
+              className="border text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+          </div>
             <div>
             <div>
             <div>
