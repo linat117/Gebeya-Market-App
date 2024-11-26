@@ -5,90 +5,90 @@ const Home = () => {
     // Example data for each category (including image and description)
     const items = {
       Men: [
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
       ],
       Women: [
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
       ],
       Kids: [
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
       ],
       Perfumes: [
        
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
       ],
       Sport: [
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
       ],
       Jewelry: [
        
-        { id: 7, image: "/src/assets/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
-        { id: 8, image: "/src/assets/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
-        { id: 9, image: "/src/assets/img/hat.png",name:"Hats", description: "See all collections" },
-        { id: 10, image: "/src/assets/img/slippers.png",name:"Slippers", description: "See all collections" },
-        { id: 4, image: "/src/assets/img/lingrae.png",name:"Lingerie", description: "See all collections" },
-        { id: 5, image: "/src/assets/img/Belts.png",name:"Belts", description: "See all collections" },
-        { id: 6, image: "/src/assets/img/street_wear.png",name:"Street wear", description: "See all collections" },
-        { id: 1, image: "/src/assets/img/shoe.png", name:"Shoes", description: "See all collections" },
-        { id: 2, image: "/src/assets/img/Bag.png",name:"Bags", description: "See all collections" },
-        { id: 3, image: "/src/assets/img/Jacket.png",name:"Jackets", description: "See all collections" },
-        { id: 11, image: "/src/assets/img/wigs.png",name:"Wigs", description: "See all collections" },
-        { id: 12, image: "/src/assets/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
+        { id: 7, image: "/img/sunglasses.png",name:"Sunglasses", description: "See all collections" },
+        { id: 8, image: "/img/sun_wear.png",name:"Sun wear", description: "See all collections" },
+        { id: 9, image: "/img/hat.png",name:"Hats", description: "See all collections" },
+        { id: 10, image: "/img/slippers.png",name:"Slippers", description: "See all collections" },
+        { id: 4, image: "/img/lingrae.png",name:"Lingerie", description: "See all collections" },
+        { id: 5, image: "/img/Belts.png",name:"Belts", description: "See all collections" },
+        { id: 6, image: "/img/street_wear.png",name:"Street wear", description: "See all collections" },
+        { id: 1, image: "/img/shoe.png", name:"Shoes", description: "See all collections" },
+        { id: 2, image: "/img/Bag.png",name:"Bags", description: "See all collections" },
+        { id: 3, image: "/img/Jacket.png",name:"Jackets", description: "See all collections" },
+        { id: 11, image: "/img/wigs.png",name:"Wigs", description: "See all collections" },
+        { id: 12, image: "/img/costmetics.png",name:"Cosmetics", description: "See all collections" },
       ],
     };
   
@@ -103,16 +103,16 @@ const Home = () => {
 <div className="mt-[6rem]">
 
     <span className="ml-[7rem] font-alfa-slab text-[128px] font-regular  text-[#FFFFFF]">Gebeya</span>
-<img src="/src/assets/img/shoee.jpeg" className="ml-[13.75rem] mt-[1rem] w-[210px] h-[210px] rounded-full"/>
+<img src="/img/shoee.jpeg" className="ml-[13.75rem] mt-[1rem] w-[210px] h-[210px] rounded-full"/>
 </div>
 <div>
-<img src="/src/assets/img/person.jpg" className="mt-[3.87rem] ml-[3.8rem] w-[250px] h-[250px] rounded-full"/>
+<img src="/img/person.jpg" className="mt-[3.87rem] ml-[3.8rem] w-[250px] h-[250px] rounded-full"/>
 <button className="bg-[#FEA301] w-[350px] h-[50px] mt-[6rem]  "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
 </div>
 <div className="block ml-[4rem] mr-[6rem] mt-[5rem]">
 <span className=" text-[#FFFFFF] font-poppins font-regular w-[320px] text-[20px] leading-[32px] ">Discover a world of convenience with our user-friendly platform, curaated collections, and exceptional customer service.<br/></span>
 <span className=" mt-[-1rem] text-[128px] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
-<img src="/src/assets/img/shirt.jpeg" className="w-[183px] h-[183px] rounded-full ml-[4rem]"/>
+<img src="/img/shirt.jpeg" className="w-[183px] h-[183px] rounded-full ml-[4rem]"/>
 </div>
             </div>
             <div>
@@ -120,8 +120,8 @@ const Home = () => {
                 <div><h1 className="mt-[4.6rem] text-[32px] font-poppins font-semibold ml-[5rem]">Latest Collections</h1></div>
               <div className="flex ml-[63rem] mt-[7rem]">
                 <button className="flex  rounded-[16px] py-[0px] w-[82px] h-[28px] space-x-[22px]">
-                    <img src="/src/assets/icons/left.png " className="px-[1px] bg-[#FEA301] h-[27px]  rounded-l-[16px]"/>
-                    <img src="/src/assets/icons/rignt.png" className="px-[3px] bg-[#FEA301] h-[27px] rounded-r-[16px]"/>
+                    <img src="/icons/left.png " className="px-[1px] bg-[#FEA301] h-[27px]  rounded-l-[16px]"/>
+                    <img src="/icons/rignt.png" className="px-[3px] bg-[#FEA301] h-[27px] rounded-r-[16px]"/>
                    
                     </button>
                 
@@ -131,16 +131,16 @@ const Home = () => {
                     <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[5rem] mt-[2.7rem] rounded-[18px]">
                         <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
                       <div className="flex">
-                       <div><img src="/src/assets/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
+                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
                    <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
                     </div>
-                    <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]"><img src="/src/assets/img/French_kiss_bag.png" className="w-[180px] h-[180px]"/></div>
+                    <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]"><img src="/img/French_kiss_bag.png" className="w-[180px] h-[180px]"/></div>
                   
                     </div>
                     <div className="flex">
                     <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Women</button></div> 
                     <div className="flex ml-[17.5rem]">
-                        <div><img src="/src/assets/icons/star1.png" className="py-[12px]"/></div>
+                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
                         <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">2K+ rating</button></div> 
                         
                         </div> 
@@ -159,16 +159,16 @@ const Home = () => {
                     <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
                         <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
                       <div className="flex">
-                       <div><img src="/src/assets/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
+                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
                    <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
                     </div>
-                    <div className="ml-[2rem] mt-[-6rem] py-[68px] px-[92px]"><img src="/src/assets/img/Burberry_Shine.png" className="w-[180px] h-[180px]"/></div>
+                    <div className="ml-[2rem] mt-[-6rem] py-[68px] px-[92px]"><img src="/img/Burberry_Shine.png" className="w-[180px] h-[180px]"/></div>
                   
                     </div>
                     <div className="flex">
                     <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Kids</button></div> 
                     <div className="flex ml-[17.5rem]">
-                        <div><img src="/src/assets/icons/star1.png" className="py-[12px]"/></div>
+                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
                         <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">1K+ rating</button></div> 
                         
                         </div> 
@@ -186,16 +186,16 @@ const Home = () => {
                     <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
                         <div className=" w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
                       <div className="flex">
-                       <div><img src="/src/assets/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
+                       <div><img src="/icons/heart.png" className="ml-[0.8rem]  py-[10px] border border-white rounded-full px-[10px] bg-white"/></div> 
                    <div> <button className="w-[70px] h-[30px] bg-white  ml-[18rem] rounded-[16px] text-[12px]">In Stock</button></div> 
                     </div>
-                    <div className="ml-[3rem] mt-[-7.5rem] py-[92px] px-[92px]"><img src="/src/assets/img/Alvero_Gown.png" className="w-[130px] h-[120px"/></div>
+                    <div className="ml-[3rem] mt-[-7.5rem] py-[92px] px-[92px]"><img src="/img/Alvero_Gown.png" className="w-[130px] h-[120px"/></div>
                   
                     </div>
                     <div className="flex">
                     <div> <button className="w-[60px] h-[25px] bg-white  ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">Women</button></div> 
                     <div className="flex ml-[17.5rem]">
-                        <div><img src="/src/assets/icons/star1.png" className="py-[12px]"/></div>
+                        <div><img src="/icons/star1.png" className="py-[12px]"/></div>
                         <div><button className=" h-[25px] bg-white  ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">5K+ rating</button></div> 
                         
                         </div> 
@@ -314,7 +314,7 @@ const Home = () => {
         <div>
           <button className="flex w-[180px] h-[40px] border border-[#C1C1C1] rounded-[10px] mt-[2rem] ml-[42.5rem] bg-primary text-white font-poppins font-medium items-center">
             See more
-            <img src="/src/assets/icons/arrow.png" alt="Arrow" />
+            <img src="/icons/arrow.png" alt="Arrow" />
           </button>
         </div>
 */}
