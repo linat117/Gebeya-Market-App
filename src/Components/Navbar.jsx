@@ -60,7 +60,7 @@ const Navbar = () => {
           >
            <li className="w-[40px] h-[24px] font-poppins text-[16px] text-[#1E1E1E]"> More</li>
           
-            <img src={isMoreOpen ? "/icons/up.png" : "src/assets/icons/down.png"} className="mt-[4px] "/>
+            <img src={isMoreOpen ? "/icons/up.png" : "/icons/down.png"} className="mt-[4px] "/>
           </button>
 
           {/* Dropdown Menu */}
@@ -136,10 +136,10 @@ const Navbar = () => {
 </div>
 <div className="flex  ml-[2.75rem] mt-[0.2rem] w-[275px] h-[40px] border border-[#C6C6C6] rounded-[16px] ">
           
-          <div className="flex w-[197px] h-[40px] px-[8px] py-[8px]"><img src="src/assets/icons/search.png" className="w-[16px] h-[16px] text-[#1E1E1E] ml-[0.5rem] mt-[4px]  opacity-100"/>
+          <div className="flex w-[197px] h-[40px] px-[8px] py-[8px]"><img src="/icons/search.png" className="w-[16px] h-[16px] text-[#1E1E1E] ml-[0.5rem] mt-[4px]  opacity-100"/>
           <input type="text" placeholder="Search" className=" w-[57px] h-[24px] font-poppins text-[16px] font-normal align-left text-[#1E1E1E] ml-[0.5rem]" />
           </div>
-          <div className="rounded-r-[16px] w-[78px] h-[40px] space-x-[10px] ml-[1rem]  bg-[#882BEC] "><img src="src/assets/icons/search.png" className="ml-[23px] mt-[8px] w-[20.28px] h-[20.28px] invert space-x-4 opacity-100"/></div>
+          <div className="rounded-r-[16px] w-[78px] h-[40px] space-x-[10px] ml-[1rem]  bg-[#882BEC] "><img src="/icons/search.png" className="ml-[23px] mt-[8px] w-[20.28px] h-[20.28px] invert space-x-4 opacity-100"/></div>
         </div> 
         <div className="flex w-[149px] h-[24px] space-x-[4px] ml-[2.75rem] mt-[11.25px]">
          <img src="/icons/uk.png" className="w-[24px] h-[24px]"/>

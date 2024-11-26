@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../Components/Navbar";
 const Home = () => {
     const [activeCategory, setActiveCategory] = useState("Men");
 
@@ -98,6 +99,7 @@ const Home = () => {
     };
     return ( 
         <>
+        <Navbar/>
         <div>
             <div className="flex bg-[#882BEC] w-screen h-[650px] ">
 <div className="mt-[6rem]">
@@ -152,7 +154,7 @@ const Home = () => {
                     </div>
                     <div className="flex mt-[2rem] ml-[0.6rem]">
                         <span className="font-poppins font-semibold mt-[0.5rem]">$500</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]">Add to cart</button>
+                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
                     </div>
                     </div>
                     
@@ -180,7 +182,7 @@ const Home = () => {
                     </div>
                     <div className="flex mt-[2rem] ml-[0.6rem]">
                         <span className="font-poppins font-semibold mt-[0.5rem]">$150</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]">Add to cart</button>
+                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
                     </div>
                     </div>
                     <div className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
@@ -207,7 +209,7 @@ const Home = () => {
                     </div>
                     <div className="flex mt-[2rem] ml-[0.6rem]">
                         <span className="font-poppins font-semibold mt-[0.5rem]">$300</span>
-                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]">Add to cart</button>
+                        <button className="border  text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"><a href="/CartPage">Add to cart</a></button>
                     </div>
                     </div>
                     <div>
@@ -336,7 +338,7 @@ const Home = () => {
         </div>
       </div>
       {/*Footer section */}
-      <div className="w-full h-[70px] bg-primary flex">
+      <div className="w-screen h-[70px] bg-primary flex">
         <div>
             <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
             <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
@@ -408,7 +410,7 @@ const Home = () => {
               </div>
             ))}
           </div>*/}
-          <div className="w-full h-[270px] bg-primary"></div>
+          <div className="w-screen h-[270px] bg-primary"></div>
         </div>
       </div>
     </div>

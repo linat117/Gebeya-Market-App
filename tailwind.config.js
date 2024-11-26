@@ -28,7 +28,11 @@ export default {
       },
       borderRadius:{
         '16': '16px'
-      }
+      },
+      spacing: {
+        'wide': '70px',
+        'wider': '50px',
+      },
     },
   },
   plugins: [],
