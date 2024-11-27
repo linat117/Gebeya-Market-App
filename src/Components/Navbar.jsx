@@ -74,10 +74,10 @@ const Navbar = () => {
       <div className="md:hidden flex items-center">
      
         <button onClick={toggleMenu}>
-          <img src={isOpen ? "icons/Cancel.png" :"icons/Humberger.png"} className="w-8 h-8" alt="Menu" /> 
+          <img src={isOpen ? "icons/Cancel.png" :"icons/Humberger.png"} className="w-8 h-8 " alt="Menu" /> 
         </button>
         <div>
-       <a href="/"> <img src="/img/image.png" className="w-8 h-8 ml-[2rem]" alt="Logo" /></a>
+       <a href="/"> <img src="/img/image.png" className="w-8 h-8 lg:ml-[2rem] ml-[1rem]" alt="Logo" /></a>
       </div>
         
         {isOpen && (
@@ -136,12 +136,12 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="ml-12 w-32 text-black focus:outline-none"
+            className="ml-[1rem] w-32 text-black focus:outline-none"
           />
         </div>
         <div className="relative">
           <a href="/CartPage">
-            <img src="/icons/cart.png" className="w-12 h-12 rounded-full" alt="Cart" />
+            <img src="/icons/cart.png" className="w-12 h-12 rounded-full " alt="Cart" />
           </a>
         </div>
       </div>

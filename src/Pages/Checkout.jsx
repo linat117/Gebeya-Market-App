@@ -221,46 +221,80 @@ const Checkout = () => {
         </div>
       </div>
       {/*Footer section */}
-      <div className="w-full h-[270px] bg-primary">
-      <div className="w-full h-[70px] bg-primary flex">
-        <div>
-            <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
-            <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
-                <img src="/icons/insta.png" className="w-[22px] h-[22px]"/>
-                <img src="/icons/whatsapp.png" className="w-[26px] h-[26px]"/>
-                <img src="/icons/x.png" className="w-[24px] h-[24px] mt-[0.1rem]"/>
-            </div>
-        </div>
-        <div className="flex space-x-[68px] mt-[5rem] ml-[44rem]  ">
-        <div >
-            <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">About</li>
-                <li>About Us</li>
-                <li>News & Blog</li>
-                <li>Location</li>
-            </ul>
-        </div>
-        <div>
-        <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">Products</li>
-                <li>Pricing</li>
-                <li>Store</li>
-                <li>Features</li>
-            </ul>
-        </div>
-        <div>
-        <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">Discover</li>
-                <li>Contact Us</li>
-                <li>Customers</li>
-                <li>Affiliates</li>
-            </ul>
-        </div>
-        </div>
-        
+      <div className="w-full bg-primary">
+  {/* Logo and Social Icons */}
+  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-6">
+  
 
+    {/* Footer Links */}
+    <div className="w-full md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+      {/* About Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">About</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>About Us</li>
+            <li>News & Blog</li>
+            <li>Location</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">About</li>
+          <li>About Us</li>
+          <li>News & Blog</li>
+          <li>Location</li>
+        </ul>
+      </div>
+      
+
+      {/* Products Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">Products</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>Pricing</li>
+            <li>Store</li>
+            <li>Features</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">Products</li>
+          <li>Pricing</li>
+          <li>Store</li>
+          <li>Features</li>
+        </ul>
+      </div>
+
+      {/* Discover Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">Discover</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>Contact Us</li>
+            <li>Customers</li>
+            <li>Affiliates</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">Discover</li>
+          <li>Contact Us</li>
+          <li>Customers</li>
+          <li>Affiliates</li>
+        </ul>
+      </div>
+      <hr/>
+        {/* Logo */}
+    <div className="text-center md:text-left">
+      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[170px] w-[70px] mx-auto md:mx-0" />
+      <div className="flex justify-center md:justify-start space-x-4 mt-4">
+        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px] h-[22px]" />
+        <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-[22px] h-[22px]" />
+        <img src="/icons/x.png" alt="X" className="w-[22px] h-[22px]" />
       </div>
     </div>
+    </div>
+  </div>
+</div>
     
     </>
   );

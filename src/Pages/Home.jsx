@@ -155,10 +155,10 @@ const Home = () => {
     <span className="ml-[2rem] mt-[2rem]  font-alfa-slab text-[42px] font-regular  text-[#FFFFFF]">TIMBU</span>
 </div>
 <div>
-<img src="/img/person.jpg" className="mt-[] ml-[5.2rem] w-[200px] h-[200px] rounded-full"/>
+<img src="/img/person.jpg" className="mt-[-1rem] ml-[5.2rem] w-[200px] h-[200px] rounded-full"/>
 <span className=" mt-[4rem] text-[42px] ml-[14rem] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
 
-<button className="bg-[#FEA301] w-[350px] h-[50px] mt-[3rem] ml-[4rem] "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
+<button className="bg-[#FEA301] w-[300px] h-[50px] mt-[3rem] ml-[1.7rem] "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
 
 </div>
 <div className="block ml-[4rem] mr-[6rem] mt-[5rem]">
@@ -178,13 +178,13 @@ const Home = () => {
                 
                 </div>
                 </div>
-                <div className="flex lg:ml-[3rem] overflow-x-auto whitespace-nowrap lg:overflow-visible">
+                <div className="flex lg:ml-[3rem] ml-[0rem] overflow-x-auto whitespace-nowrap lg:overflow-visible">
   {products.map((product) => (
     <div
       key={product.id}
-      className="inline-block w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"
+      className="inline-block lg:w-[440px] w-[220px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"
     >
-      <div className="w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] mr-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
+      <div className="lg:w-[420px] w-[200px] h-[207px] mt-[0.6rem] ml-[0.6rem] mr-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
         <div className="flex">
           <div>
             <img
@@ -194,16 +194,16 @@ const Home = () => {
             />
           </div>
           <div>
-            <button className="w-[70px] h-[30px] bg-white ml-[18rem] rounded-[16px] text-[12px]">
+            <button className="w-[70px] h-[30px] bg-white lg:ml-[18rem] ml-[4rem] rounded-[16px] text-[12px]">
               In Stock
             </button>
           </div>
         </div>
-        <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]">
+        <div className="ml-[1rem] mt-[-7rem] lg:py-[72px] py-[102px]  lg:px-[92px] px-[10px]">
           <img
             src={product.images[0] || "img/french_kiss_bag.png"}
             alt={product.name}
-            className="w-[180px] h-[180px]"
+            className="lg:w-[180px] w-[130px] lg:h-[180px] h-[130px]"
           />
         </div>
       </div>
@@ -213,12 +213,12 @@ const Home = () => {
             Women
           </button>
         </div>
-        <div className="flex ml-[17.5rem]">
+        <div className="flex lg:ml-[17.5rem] ml:[8rem]">
           <div>
-            <img src="/icons/star1.png" className="py-[12px]" alt="Star icon" />
+            <img src="/icons/star1.png" className="py-[12px] lg:ml-[0rem] ml-[4rem]" alt="Star icon" />
           </div>
           <div>
-            <button className="h-[25px] bg-white ml-[0rem] text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">
+            <button className="h-[25px] bg-white lg:ml-[0rem]  text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">
               2K+ rating
             </button>
           </div>
@@ -234,7 +234,7 @@ const Home = () => {
         <span className="font-poppins font-semibold mt-[0.5rem]">{product.price}</span>
         <button
           onClick={() => handleAddToCart(product)}
-          className="border text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"
+          className="border text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] lg:ml-[18rem] ml-[4rem]"
         >
           Add to cart
         </button>
@@ -248,7 +248,7 @@ const Home = () => {
             <div>
             <div>
       {/* Category Buttons */}
-     <div className="lg:flex lg:space-x-[16px] lg:ml-[5rem] ml-[2.5rem] mt-[3rem] mb-[2rem] flex overflow-x-auto gap-[16px]">
+     <div className="lg:flex lg:space-x-[16px] lg:ml-[5rem] ml-[1.5rem] mt-[3rem] mb-[2rem] flex overflow-x-auto gap-[16px]">
   {Object.keys(items).map((category) => (
     <button
       key={category}
@@ -264,15 +264,15 @@ const Home = () => {
 
 
       {/* Display Items */}
-      <div className="lg:ml-[5rem] ml-[2.5rem] ">
+      <div className="lg:ml-[5rem] ml-[1rem] ">
         {/* First Row */}
         <div className="lg:flex grid md:grid-cols-3 grid-cols-2 lg:space-x-[36px] lg:mb-[2rem] ">
           {items[activeCategory].slice(0, 6).map((item) => (
             <div
               key={item.id}
-              className="w-[200px] h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2"
+              className="lg:w-[200px] lg:h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2 lg:m-0 m-3"
             >
-                <div className="w-[150px] h-[100px] mt-[1rem] rounded-[12px] bg-gray-100 px-[40px] py-[14px]">
+                <div className="lg:w-[150px] h-[100px] mt-[1rem] rounded-[12px] bg-gray-100 px-[40px] py-[14px]">
               <img
                 src={item.image}
                 alt={item.description}
@@ -291,9 +291,9 @@ const Home = () => {
           {items[activeCategory].slice(6, 12).map((item) => (
             <div
               key={item.id}
-              className="w-[200px]  h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2"
+              className="lg:w-[200px]  lg:h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2 lg:m-0 m-3"
             >
-              <div className="w-[150px] h-[100px] mt-[1rem] rounded-[12px] bg-gray-100 px-[40px] py-[14px]">
+              <div className="lg:w-[150px] lg:h-[100px] mt-[1rem] rounded-[12px] bg-gray-100 px-[40px] py-[14px]">
               <img
                 src={item.image}
                 alt={item.description}
@@ -316,15 +316,15 @@ const Home = () => {
       </div>
 
       {/* Placeholder for Other Sections */}
-      <div className=" bg-[#D0D0D0] lg:w-[1380px] w-[430px] lg:h-[400px] h-[360px] lg:ml-[5rem] ml-[2rem] lg:mt-[4rem] mt-[2rem] rounded-[16px]">
+      <div className=" bg-[#D0D0D0] lg:w-[1380px] w-[315px] lg:h-[400px] h-[360px] lg:ml-[5rem] ml-[1.8rem] lg:mt-[4rem] mt-[2rem] rounded-[16px]">
         
         <div className="flex"><div className=" lg:ml-[3rem] ml-[1rem] lg:mt-[1rem] mt-[1rem]"> 
-<div className="font-poppins font-semibold lg:text-primary text-white lg:text-[40px] text-[28px]  lg:w-[450px]">Our Curated Summer Collection</div>
-<div className="font-poppins font-regular text-[16px]  w-[360px] leading-[26px] lg:text-primary text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
-      <button className="bg-[#FEA301] mt-[2rem] h-[38px] w-[160px] rounded-[12px] text-white">Explore Now</button>
+<div className="font-poppins font-semibold lg:text-primary text-white lg:text-[40px] text-[18px]  lg:w-[450px] w-[200px]">Our Curated Summer Collection</div>
+<div className="font-poppins font-regular text-[16px]  lg:w-[360px] w-[280px] leading-[26px] lg:text-primary  text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
+      <button className="bg-[#FEA301] mt-[2rem] ml-[0.8rem] h-[38px] w-[260px] rounded-[12px] text-white">Explore Now</button>
         </div>
     
-        <div className="hidden"><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] w-[1150px] w-[700px] ml-[rem]"/></div>
+        <div className="hidden"><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] lg:w-[1150px] sm:hidden ml-[rem]"/></div>
       </div>
       <div>
         <div className="lg:hidden w-[10px] h-[10px] rounded-full bg-[#FFD700] lg:mt-[-23.5rem] mt-[-17rem]  lg:ml-[35.6rem] ml-[20rem]"></div>
@@ -341,36 +341,36 @@ const Home = () => {
       </div>
       <h1 className="lg:mt-[4.6rem] mt-[2rem] lg:text-[40px] text-[28px] font-semibold lg:ml-[5rem] ml-[2rem] font-poppins">Browse by category</h1>
       <div className="flex overflow-x-auto space-x-4 ml-[2rem] lg:mt-[3rem] mt-[1.6rem] sm:ml-[5rem]">
-  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
-    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-      <img src="img/casual_shirt.png" className="py-[8px] px-[46px]" alt="Casual Shirt" />
+  <div className="lg:w-[320px] lg:h-[397px]   border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="lg:w-[320px] w-[250px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/casual_shirt.png" className="lg:py-[8px] py-[38px] px-[46px] " alt="Casual Shirt" />
     </div>
     <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Casual Wear</div>
     <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
       Over 20 categories in stock
     </div>
   </div>
-  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
-    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-      <img src="img/vintage_dress.png" className="py-[1px] px-[46px]" alt="Vintage Dress" />
+  <div className="lg:w-[320px] lg:h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="lg:w-[320px] w-[250px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/vintage_dress.png" className="lg:py-[1px]  py-[28px] px-[46px]" alt="Vintage Dress" />
     </div>
     <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Vintage</div>
     <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
       Over 31 categories in stock
     </div>
   </div>
-  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
-    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-      <img src="img/beauty_products.png" className="py-[30px] px-[46px]" alt="Beauty Products" />
+  <div className="lg:w-[320px] lg:h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="lg:w-[320px] w-[250px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/beauty_products.png" className="lg:py-[30px] py-[48px] px-[46px]" alt="Beauty Products" />
     </div>
     <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Beauty Products</div>
     <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
       Over 24 categories in stock
     </div>
   </div>
-  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
-    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-      <img src="img/gym_wears (2).png" className="py-[8px] px-[46px]" alt="Gym Wears" />
+  <div className="lg:w-[320px] lg:h-[397px] border-[#C1C1C1] mb-[3rem] mr-[1rem] rounded-[18px]">
+    <div className="lg:w-[320px] w-[250px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/gym_wears (2).png" className="lg:py-[8px] py-[39px] px-[46px]" alt="Gym Wears" />
     </div>
     <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Gym Wears</div>
     <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
@@ -380,46 +380,81 @@ const Home = () => {
 </div>
 
       {/*Footer section */}
-      <div className="w-full h-[270px] bg-primary">
-      <div className="w-full h-[7px] bg-primary flex">
-        <div>
-            <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
-            <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
-                <img src="/icons/insta.png" className="w-[22px] h-[22px]"/>
-                <img src="/icons/whatsapp.png" className="w-[26px] h-[26px]"/>
-                <img src="/icons/x.png" className="w-[24px] h-[24px] mt-[0.1rem]"/>
-            </div>
-        </div>
-        <div className="flex space-x-[68px] mt-[5rem] ml-[44rem]  ">
-        <div >
-            <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">About</li>
-                <li>About Us</li>
-                <li>News & Blog</li>
-                <li>Location</li>
-            </ul>
-        </div>
-        <div>
-        <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">Products</li>
-                <li>Pricing</li>
-                <li>Store</li>
-                <li>Features</li>
-            </ul>
-        </div>
-        <div>
-        <ul className="text-white leading-[36px] font-poppins">
-                <li className="font-bold ">Discover</li>
-                <li>Contact Us</li>
-                <li>Customers</li>
-                <li>Affiliates</li>
-            </ul>
-        </div>
-        </div>
-        
+      <div className="w-full bg-primary">
+  {/* Logo and Social Icons */}
+  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-6">
+  
 
+    {/* Footer Links */}
+    <div className="w-full md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+      {/* About Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">About</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>About Us</li>
+            <li>News & Blog</li>
+            <li>Location</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">About</li>
+          <li>About Us</li>
+          <li>News & Blog</li>
+          <li>Location</li>
+        </ul>
+      </div>
+      
+
+      {/* Products Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">Products</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>Pricing</li>
+            <li>Store</li>
+            <li>Features</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">Products</li>
+          <li>Pricing</li>
+          <li>Store</li>
+          <li>Features</li>
+        </ul>
+      </div>
+
+      {/* Discover Dropdown */}
+      <div>
+        <details className="md:hidden">
+          <summary className="text-white font-bold cursor-pointer">Discover</summary>
+          <ul className="text-white space-y-2 mt-2">
+            <li>Contact Us</li>
+            <li>Customers</li>
+            <li>Affiliates</li>
+          </ul>
+        </details>
+        <ul className="hidden md:block text-white space-y-2">
+          <li className="font-bold">Discover</li>
+          <li>Contact Us</li>
+          <li>Customers</li>
+          <li>Affiliates</li>
+        </ul>
+      </div>
+      <hr/>
+        {/* Logo */}
+    <div className="text-center md:text-left">
+      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[170px] w-[70px] mx-auto md:mx-0" />
+      <div className="flex justify-center md:justify-start space-x-4 mt-4">
+        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px] h-[22px]" />
+        <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-[22px] h-[22px]" />
+        <img src="/icons/x.png" alt="X" className="w-[22px] h-[22px]" />
       </div>
     </div>
+    </div>
+  </div>
+</div>
+
     </div>
 
       {/* See More Button
