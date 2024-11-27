@@ -24,19 +24,44 @@ const CartPage = () => {
   const handleIncrease = () => {
     setQuantity(quantity + 1); // Increase value by 1
   };
-  const [text, setText] = useState(''); // Initial text is empty
-
-  // Function to change text when a button is clicked
-  const handleButtonClick = (newText) => {
-    setText(newText);
+  const items = {
+   Overview: `Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.
+Built-in arch support to help maintain healthy foot development.
+Soft insoles and adequate padding to support growing feet.
+Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.
+Built-in arch support to help maintain healthy foot development.
+Soft insoles and adequate padding to support growing feet.`,
+   Description: `Built-in arch support to help maintain healthy foot development.
+Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.
+Built-in arch support to help maintain healthy foot development.
+Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.`,
+    Warranty: `Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.Built-in arch support to help maintain healthy foot development.
+Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, and patterns and themes to appeal to kids
+Rubber outsoles with good traction to prevent slips and falls.Built-in arch support to help maintain healthy foot development.`,
+    Reviews:`Rubber outsoles with good traction to prevent slips and falls.Built-in arch support to help maintain healthy foot development.
+    Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, 
+    and patterns and themes to appeal to kids.
+    Rubber outsoles with good traction to prevent slips and falls.Built-in arch support to help maintain healthy foot development.
+    Soft insoles and adequate padding to support growing feet.Available in a wide range of colors, patterns, 
+    and patterns and themes to appeal to kids`
   };
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
+
+  const [activeCategory, setActiveCategory] = useState("Overview");
+  const [content, setContent] = useState(items["Overview"]);
+
+  const changeCategory = (category) => {
+    setActiveCategory(category);
+    setContent(items[category]);
+  };
   return (
     <>
       <Navbar />
-      <div className="bg-[#F2F2F2] w-screen h-full">
+      <div className="bg-[#F2F2F2] w-full h-full py-[24px]">
         {/* Breadcrumb */}
         <div className="flex space-x-[10px] ml-[5rem] py-[18px]">
           <p>Home</p> <p>&gt;</p> <p>Kids</p> <p>&gt;</p> <p>Shoes</p> <p>&gt;</p> <p>Sneakers</p>
@@ -167,143 +192,77 @@ For details about return shipping options, please visit our Contact page</p>
           </div>
         </div>
         <div >
-           <div className="border border-[#C1C1C1] bg-white w-[1380px] ml-[5rem] mt-[2rem] h-[500px] rounded-[16px]">
+           <div className="border border-[#C1C1C1] bg-white w-[1380px] ml-[5rem] mb-[4rem] mt-[2rem] h-[500px] rounded-[16px]">
 <div>
-<div className="flex flex-col items-center space-y-4">
-      {/* Buttons in flex layout */}
-      <div className="flex space-x-4">
-        <button
-          onClick={() => handleButtonClick('Button 1 clicked!')}
-          className="px-4 py-2   rounded-[22px] hover:bg-[#FEA301] active:bg-[#FEA301] border border-black"
-        >
-         Overview
-        </button>
-        <button
-          onClick={() => handleButtonClick('Button 2 clicked!')}
-          className="px-4 py-2   rounded-[22px] hover:bg-[#FEA301] active:bg-[#FEA301] border border-black"
-        >
-          Description
-        </button>
-        <button
-          onClick={() => handleButtonClick('Button 3 clicked!')}
-          className="px-4 py-2   rounded-[22px] hover:bg-[#FEA301] active:bg-[#FEA301] border border-black"
-        >
-          Warranty
-        </button>
-        <button
-          onClick={() => handleButtonClick('Button 4 clicked!')}
-          className="px-4 py-2   rounded-[22px] hover:bg-[#FEA301] active:bg-[#FEA301] border border-black"
-        >
-          Reviews
-        </button>
+<div className="flex flex-col items-start ml-[5rem] mt-[3rem]">
+      <div className="flex space-x-[36px] mb-[2rem]">
+        {Object.keys(items).map((category) => (
+          <button
+            key={category}
+            onClick={() => changeCategory(category)}
+            className={`w-[200px] h-[40px] border border-[#C1C1C1] rounded-[23px] transition-all 
+            ${
+              activeCategory === category
+                ? "bg-[#FEA301] text-white"
+                : "bg-white text-black hover:bg-[#FEA301] hover:text-white"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
       </div>
-
-      {/* Displaying the text below the buttons */}
-      <p className="text-xl font-semibold">{text}</p>
+      {content && (
+        <div className="mt-[2rem] mr-[4rem] p-[1rem] border border-[#C1C1C1]/[50%] leading-[38px] rounded-lg bg-[#F2F2F2]">
+          <p>{content}</p>
+        </div>
+      )}
     </div>
 </div>
            </div>
         </div>
       </div>
-      <div className="w-screen bg-primary h-full text-white">
-      {/* Desktop and tablet screens */}
-      <div className="flex flex-col md:flex-row md:space-x-[68px] p-4">
-        {/* About Section */}
-        <div className="mt-4">
-          <ul className="leading-[36px] font-poppins">
-            <li className="font-bold">About</li>
-            <li>About Us</li>
-            <li>News & Blog</li>
-            <li>Location</li>
-          </ul>
+      {/*Footer section */}
+      <div className="w-full h-[270px] bg-primary">
+      <div className="w-full bg-primary flex">
+        <div>
+            <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
+            <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
+                <img src="/icons/insta.png" className="w-[22px] h-[22px]"/>
+                <img src="/icons/whatsapp.png" className="w-[26px] h-[26px]"/>
+                <img src="/icons/x.png" className="w-[24px] h-[24px] mt-[0.1rem]"/>
+            </div>
         </div>
-
-        {/* Products Section */}
-        <div className="mt-4">
-          <ul className="leading-[36px] font-poppins">
-            <li className="font-bold">Products</li>
-            <li>Pricing</li>
-            <li>Store</li>
-            <li>Features</li>
-          </ul>
-        </div>
-
-        {/* Discover Section */}
-        <div className="mt-4">
-          <ul className="leading-[36px] font-poppins">
-            <li className="font-bold">Discover</li>
-            <li>Contact Us</li>
-            <li>Customers</li>
-            <li>Affiliates</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Mobile View: Dropdowns for each section */}
-      <div className="md:hidden mt-4">
-        <div className="space-y-4">
-          <div>
-            <button
-              onClick={() => setIsAboutOpen(!isAboutOpen)}
-              className="w-full text-left font-bold bg-primary text-white"
-            >
-              About
-            </button>
-            {isAboutOpen && (
-              <ul className="pl-4 space-y-2">
+        <div className="flex space-x-[68px] mt-[5rem] ml-[44rem]  ">
+        <div >
+            <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">About</li>
                 <li>About Us</li>
                 <li>News & Blog</li>
                 <li>Location</li>
-              </ul>
-            )}
-          </div>
-
-          <div>
-            <button
-              onClick={() => setIsProductsOpen(!isProductsOpen)}
-              className="w-full text-left font-bold bg-primary text-white"
-            >
-              Products
-            </button>
-            {isProductsOpen && (
-              <ul className="pl-4 space-y-2">
+            </ul>
+        </div>
+        <div>
+        <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">Products</li>
                 <li>Pricing</li>
                 <li>Store</li>
                 <li>Features</li>
-              </ul>
-            )}
-          </div>
-
-          <div>
-            <button
-              onClick={() => setIsDiscoverOpen(!isDiscoverOpen)}
-              className="w-full text-left font-bold bg-primary text-white"
-            >
-              Discover
-            </button>
-            {isDiscoverOpen && (
-              <ul className="pl-4 space-y-2">
+            </ul>
+        </div>
+        <div>
+        <ul className="text-white leading-[36px] font-poppins">
+                <li className="font-bold ">Discover</li>
                 <li>Contact Us</li>
                 <li>Customers</li>
                 <li>Affiliates</li>
-              </ul>
-            )}
-          </div>
+            </ul>
         </div>
-      </div>
-
-      {/* Logo and Social Icons */}
-      <div className="border-t border-white mt-4 pt-4 pb-4 flex flex-col items-center">
-        <img src="/img/footer-logo.png" className="w-[170px]" alt="Footer Logo" />
-        <div className="flex space-x-4 mt-4">
-          <img src="/icons/insta.png" className="w-[22px] h-[22px]" alt="Instagram" />
-          <img src="/icons/whatsapp.png" className="w-[26px] h-[26px]" alt="WhatsApp" />
-          <img src="/icons/x.png" className="w-[24px] h-[24px]" alt="Other Icon" />
         </div>
-      </div>
+        
 
-      {/* Empty space below */}
+      </div>
     </div>
+    
     </>
   );
 };

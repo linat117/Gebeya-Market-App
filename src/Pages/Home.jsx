@@ -132,7 +132,7 @@ const Home = () => {
         <>
         <Navbar/>
         <div>
-            <div className="flex bg-[#882BEC] w-screen h-[650px] ">
+            <div className="flex bg-[#882BEC] w-full h-[650px] ">
 <div className="mt-[6rem]">
 
     <span className="ml-[7rem] font-alfa-slab text-[122px] font-regular  text-[#FFFFFF]">Gebeya</span>
@@ -345,7 +345,8 @@ const Home = () => {
         </div>
       </div>
       {/*Footer section */}
-      <div className="w-screen h-[70px] bg-primary flex">
+      <div className="w-full h-[270px] bg-primary">
+      <div className="w-full h-[70px] bg-primary flex">
         <div>
             <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
             <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
@@ -384,6 +385,7 @@ const Home = () => {
 
       </div>
     </div>
+    </div>
 
       {/* See More Button
       <div className="flex justify-center mt-8">
@@ -416,8 +418,8 @@ const Home = () => {
                 <div className="w-[320px] h-[207px] mt-[1.2rem] ml-[1.2rem] rounded-[8px] bg-[#C1C1C1]/[22%]"></div>
               </div>
             ))}
-          </div>*/}
-          <div className="w-screen h-[270px] bg-primary"></div>
+          */}
+         {/*</div>*/}
         </div>
       </div>
     </div>
