@@ -131,8 +131,8 @@ const Home = () => {
     return ( 
         <>
         <Navbar/>
-        <div>
-            <div className="flex bg-[#882BEC] w-full h-[650px] ">
+        <div className="overflow-x-hidden overflow-auto">
+            <div className="hidden lg:flex bg-[#882BEC] w-full h-[650px] ">
 <div className="mt-[6rem]">
 
     <span className="ml-[7rem] font-alfa-slab text-[122px] font-regular  text-[#FFFFFF]">Gebeya</span>
@@ -148,10 +148,28 @@ const Home = () => {
 <img src="/img/shirt.jpeg" className="w-[183px] h-[183px] rounded-full ml-[4rem]"/>
 </div>
             </div>
+            {/*mobile view */}
+            <div className=" lg:hidden bg-[#882BEC] w-full h-[500px] ">
+<div className="mt-[0rem] py-[24px]">
+
+    <span className="ml-[2rem] mt-[2rem]  font-alfa-slab text-[42px] font-regular  text-[#FFFFFF]">TIMBU</span>
+</div>
+<div>
+<img src="/img/person.jpg" className="mt-[] ml-[5.2rem] w-[200px] h-[200px] rounded-full"/>
+<span className=" mt-[4rem] text-[42px] ml-[14rem] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
+
+<button className="bg-[#FEA301] w-[350px] h-[50px] mt-[3rem] ml-[4rem] "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
+
+</div>
+<div className="block ml-[4rem] mr-[6rem] mt-[5rem]">
+</div>
+            </div>
+            {/*Tablet view */}
+            
             <div>
                 <div className="flex">
-                <div><h1 className="mt-[4.6rem] text-[32px] font-poppins font-semibold ml-[5rem]">Latest Collections</h1></div>
-              <div className="flex ml-[63rem] mt-[7rem]">
+                <div><h1 className="mt-[4.6rem] text-[32px] font-poppins font-semibold  lg:ml-[5rem] ml-[1.5rem]">Latest Collections</h1></div>
+              <div className="flex lg:ml-[63rem] hidden   lg:mt-[7rem]">
                 <button className="flex  rounded-[16px] py-[0px] w-[82px] h-[22px] space-x-[22px]">
                     <img src="/icons/left.png " className="px-[1px] bg-[#FEA301] h-[27px]  rounded-l-[16px]"/>
                     <img src="/icons/rignt.png" className="px-[3px] bg-[#FEA301] h-[27px] rounded-r-[16px]"/>
@@ -160,93 +178,95 @@ const Home = () => {
                 
                 </div>
                 </div>
-                <div className="flex ml-[3rem]">
-      {products.map((product) => (
-        <div
-          key={product.id}
-          className="w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"
-        >
-          <div className="w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] mr-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
-            <div className="flex">
-              <div>
-                <img
-                  src="/icons/heart.png"
-                  className="ml-[0.8rem] py-[10px] border border-white rounded-full px-[10px] bg-white"
-                  alt="Heart icon"
-                />
-              </div>
-              <div>
-                <button className="w-[70px] h-[30px] bg-white ml-[18rem] rounded-[16px] text-[12px]">
-                  In Stock
-                </button>
-              </div>
-            </div>
-            <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]">
-              <img
-                src={product.images[0] || "img/french_kiss_bag.png"}
-                alt={product.name}
-                className="w-[180px] h-[180px]"
-              />
-            </div>
+                <div className="flex lg:ml-[3rem] overflow-x-auto whitespace-nowrap lg:overflow-visible">
+  {products.map((product) => (
+    <div
+      key={product.id}
+      className="inline-block w-[440px] h-[397px] border border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]"
+    >
+      <div className="w-[420px] h-[207px] mt-[0.6rem] ml-[0.6rem] mr-[0.6rem] py-[12px] rounded-[8px] bg-[#C1C1C1]/[22%]">
+        <div className="flex">
+          <div>
+            <img
+              src="/icons/heart.png"
+              className="ml-[0.8rem] py-[10px] border border-white rounded-full px-[10px] bg-white"
+              alt="Heart icon"
+            />
           </div>
-          <div className="flex">
-            <div>
-              <button className="w-[60px] h-[25px] bg-white ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">
-                Women
-              </button>
-            </div>
-            <div className="flex ml-[17.5rem]">
-              <div>
-                <img src="/icons/star1.png" className="py-[12px]" alt="Star icon" />
-              </div>
-              <div>
-                <button className="h-[25px] bg-white ml-[0rem] text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">
-                  2K+ rating
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="ml-[0.6rem] mt-[0.8rem]">
-            <span className="font-poppins font-semibold text-[#1E1E1E]">{product.name}</span>
-            <p className="text-[#808080] font-poppins text-[12px] font-medium">
-              {product.description}
-            </p>
-          </div>
-          <div className="flex mt-[2rem] ml-[0.6rem]">
-            <span className="font-poppins font-semibold mt-[0.5rem]">{product.price}</span>
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="border text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"
-            >
-              Add to cart
+          <div>
+            <button className="w-[70px] h-[30px] bg-white ml-[18rem] rounded-[16px] text-[12px]">
+              In Stock
             </button>
           </div>
         </div>
-      ))}
+        <div className="ml-[1rem] mt-[-7rem] py-[72px] px-[92px]">
+          <img
+            src={product.images[0] || "img/french_kiss_bag.png"}
+            alt={product.name}
+            className="w-[180px] h-[180px]"
+          />
+        </div>
+      </div>
+      <div className="flex">
+        <div>
+          <button className="w-[60px] h-[25px] bg-white ml-[0.6rem] rounded-[16px] border border-[#C6C6C6] text-[12px] mt-[0.5rem] text-[#1E1E1E]/[70%]">
+            Women
+          </button>
+        </div>
+        <div className="flex ml-[17.5rem]">
+          <div>
+            <img src="/icons/star1.png" className="py-[12px]" alt="Star icon" />
+          </div>
+          <div>
+            <button className="h-[25px] bg-white ml-[0rem] text-[12px] mt-[0.5rem] font-poppins text-[#1E1E1E]/[70%]">
+              2K+ rating
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="ml-[0.6rem] mt-[0.8rem]">
+        <span className="font-poppins font-semibold text-[#1E1E1E]">{product.name}</span>
+        <p className="text-[#808080] font-poppins text-[12px] font-medium">
+          {product.description}
+        </p>
+      </div>
+      <div className="flex mt-[2rem] ml-[0.6rem]">
+        <span className="font-poppins font-semibold mt-[0.5rem]">{product.price}</span>
+        <button
+          onClick={() => handleAddToCart(product)}
+          className="border text-[#FFFFFF] bg-[#FEA301] text-[12px] font-poppins font-medium py-[10px] px-[12px] rounded-[10px] ml-[18rem]"
+        >
+          Add to cart
+        </button>
+      </div>
     </div>
+  ))}
+</div>
+
           </div>
             <div>
             <div>
             <div>
       {/* Category Buttons */}
-      <div className="flex space-x-[36px] ml-[5rem] mt-[3rem] mb-[2rem]">
-        {Object.keys(items).map((category) => (
-          <button
-            key={category}
-            onClick={() => changeCategory(category)}
-            className={`w-[200px] h-[40px] border border-[#C1C1C1] rounded-[23px] ${
-              activeCategory === category ? "bg-[#FEA301] text-white" : ""
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+     <div className="lg:flex lg:space-x-[16px] lg:ml-[5rem] ml-[2.5rem] mt-[3rem] mb-[2rem] flex overflow-x-auto gap-[16px]">
+  {Object.keys(items).map((category) => (
+    <button
+      key={category}
+      onClick={() => changeCategory(category)}
+      className={`lg:w-[200px] lg:h-[40px] w-[150px] mb-[2rem] h-[40px] border border-[#C1C1C1] rounded-[23px] shrink-0 ${
+        activeCategory === category ? "bg-[#FEA301] text-white" : ""
+      }`}
+    >
+      {category}
+    </button>
+  ))}
+</div>
+
 
       {/* Display Items */}
-      <div className="ml-[5rem]">
+      <div className="lg:ml-[5rem] ml-[2.5rem] ">
         {/* First Row */}
-        <div className="flex space-x-[36px] mb-[2rem]">
+        <div className="lg:flex grid md:grid-cols-3 grid-cols-2 lg:space-x-[36px] lg:mb-[2rem] ">
           {items[activeCategory].slice(0, 6).map((item) => (
             <div
               key={item.id}
@@ -267,11 +287,11 @@ const Home = () => {
         </div>
 
         {/* Second Row */}
-        <div className="flex space-x-[36px]">
+        <div className="lg:flex grid md:grid-cols-3 grid-cols-2 lg:space-x-[36px]">
           {items[activeCategory].slice(6, 12).map((item) => (
             <div
               key={item.id}
-              className="w-[200px] h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2"
+              className="w-[200px]  h-[240px] border border-[#C1C1C1] rounded-[8px] flex flex-col items-center p-2"
             >
               <div className="w-[150px] h-[100px] mt-[1rem] rounded-[12px] bg-gray-100 px-[40px] py-[14px]">
               <img
@@ -296,57 +316,72 @@ const Home = () => {
       </div>
 
       {/* Placeholder for Other Sections */}
-      <div className=" bg-[#D0D0D0] w-[1380px] h-[400px] ml-[5rem] mt-[4rem] rounded-[16px]">
+      <div className=" bg-[#D0D0D0] lg:w-[1380px] w-[430px] lg:h-[400px] h-[360px] lg:ml-[5rem] ml-[2rem] lg:mt-[4rem] mt-[2rem] rounded-[16px]">
         
-        <div className="flex"><div className=" ml-[3rem] mt-[1rem]"> 
-<div className="font-poppins font-semibold text-white text-[40px]  w-[450px]">Our Curated Summer Collection</div>
-<div className="font-poppins font-regular text-[16px]  w-[360px] leading-[26px] text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
+        <div className="flex"><div className=" lg:ml-[3rem] ml-[1rem] lg:mt-[1rem] mt-[1rem]"> 
+<div className="font-poppins font-semibold lg:text-primary text-white lg:text-[40px] text-[28px]  lg:w-[450px]">Our Curated Summer Collection</div>
+<div className="font-poppins font-regular text-[16px]  w-[360px] leading-[26px] lg:text-primary text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
       <button className="bg-[#FEA301] mt-[2rem] h-[38px] w-[160px] rounded-[12px] text-white">Explore Now</button>
         </div>
     
-        <div><img src="/summer_advert.png" className="h-[400px]  rounded-[16px] w-[1150px] ml-[rem]"/></div>
+        <div className="hidden"><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] w-[1150px] w-[700px] ml-[rem]"/></div>
       </div>
       <div>
-        <div className="w-[10px] h-[10px] rounded-full bg-[#FFD700]  mt-[-23.5rem] ml-[35.6rem]"></div>
+        <div className="lg:hidden w-[10px] h-[10px] rounded-full bg-[#FFD700] lg:mt-[-23.5rem] mt-[-17rem]  lg:ml-[35.6rem] ml-[20rem]"></div>
 
-          <div className="w-[22px] h-[22px] rounded-full bg-primary mt-[2.6rem] ml-[66rem]"></div>
-          <div className="w-[22px] h-[22px] rounded-full bg-primary mt-[0.6rem] ml-[46rem]  "></div>
-          <div className="flex mt-[6rem] ml-[33.4rem]">    <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%]  "></div>
-          <div className="w-[26px] h-[26px] rounded-full bg-[#FFD700] ml-[12rem] "></div>
-          </div> <div className="w-[22px] h-[22px] rounded-full bg-primary ml-[29rem] mt-[5rem] ml-[42rem]  "></div>
-          <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] ml-[58rem] "></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[2.6rem] mt-[1.9rem] lg:ml-[66rem] ml-[16rem]"></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[0.6rem] mt-[3.5rem] lg:ml-[46rem] ml-[18rem] "></div>
+          <div className="flex lg:mt-[6rem] lg:ml-[33.4rem]">   
+             <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] ml-[2rem] mt-[0.2rem] "></div>
+          <div className="lg:hidden w-[26px] h-[26px] rounded-full bg-[#FFD700] lg:ml-[12rem] ml-[5rem] mt-[2rem] "></div>
+          </div> <div className="w-[22px] h-[22px] rounded-full bg-primary lg:ml-[29rem] lg:mt-[5rem] mt-[4rem] lg:ml-[42rem] ml-[18rem] "></div>
+          <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] lg:ml-[58rem]  ml-[4rem]"></div>
        
         </div>
       </div>
-      <h1 className="mt-[4.6rem] text-[40px] font-semibold ml-[5rem] font-poppins">Browse by category</h1>
-      <div className="flex">
-        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[5rem] mt-[2.7rem] rounded-[18px]">
-          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-          <img src="img/casual_shirt.png" className="py-[8px] px-[46px]"/></div>
-          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Casual Wear</div>
-          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 20 categories in stock</div>
-        </div>
-        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
-          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-          <img src="img/vintage_dress.png" className="py-[1px] px-[46px]"/></div>
-          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]">Vintage</div>
-          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 31 categories in stock</div>
-        </div> <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
-          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-          <img src="img/beauty_products.png" className="py-[30px] px-[46px]"/></div>
-          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Beauty products</div>
-          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 24 categories in stock</div>
-        </div>
-        <div className="w-[320px] h-[397px]  border-[#C1C1C1] mb-[3rem] ml-[2rem] mt-[2.7rem] rounded-[18px]">
-          <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
-          <img src="img/gym_wears (2).png" className="py-[8px] px-[46px]"/></div>
-          <div className="font-poppins font-bold text-[18px] mt-[2.4rem] ml-[5.7rem]"> Gym wears</div>
-          <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] ml-[4.3rem]">Over 62 categories in stock</div>
-        </div>
-      </div>
+      <h1 className="lg:mt-[4.6rem] mt-[2rem] lg:text-[40px] text-[28px] font-semibold lg:ml-[5rem] ml-[2rem] font-poppins">Browse by category</h1>
+      <div className="flex overflow-x-auto space-x-4 ml-[2rem] lg:mt-[3rem] mt-[1.6rem] sm:ml-[5rem]">
+  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/casual_shirt.png" className="py-[8px] px-[46px]" alt="Casual Shirt" />
+    </div>
+    <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Casual Wear</div>
+    <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
+      Over 20 categories in stock
+    </div>
+  </div>
+  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/vintage_dress.png" className="py-[1px] px-[46px]" alt="Vintage Dress" />
+    </div>
+    <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Vintage</div>
+    <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
+      Over 31 categories in stock
+    </div>
+  </div>
+  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/beauty_products.png" className="py-[30px] px-[46px]" alt="Beauty Products" />
+    </div>
+    <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Beauty Products</div>
+    <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
+      Over 24 categories in stock
+    </div>
+  </div>
+  <div className="w-[320px] h-[397px] border-[#C1C1C1] mb-[3rem] rounded-[18px]">
+    <div className="w-[320px] h-[240px] bg-[#C6C6C6]/[30%] rounded-[18px]">
+      <img src="img/gym_wears (2).png" className="py-[8px] px-[46px]" alt="Gym Wears" />
+    </div>
+    <div className="font-poppins font-bold text-[18px] mt-[2.4rem] text-center">Gym Wears</div>
+    <div className="font-poppins font-normal text-[12px] text-[#C6C6C6]/[80%] mt-[0.3rem] text-center">
+      Over 62 categories in stock
+    </div>
+  </div>
+</div>
+
       {/*Footer section */}
       <div className="w-full h-[270px] bg-primary">
-      <div className="w-full h-[70px] bg-primary flex">
+      <div className="w-full h-[7px] bg-primary flex">
         <div>
             <img src="/img/footer-logo.png" className="w-[170px] ml-[8rem] mt-[4rem]"/>
             <div className="flex space-x-[12px] mt-[1.5rem] ml-[9.7rem]">
