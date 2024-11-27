@@ -113,13 +113,13 @@ const Checkout = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F2F2F2] w-full py-[24px] h-full overflow-x-hidden">
+      <div className="bg-[#F2F2F2] lg:w-full w-auto py-[24px] h-full overflow-x-hidden">
         {/* Breadcrumb */}
        
 
-        <div className="flex py-[36px]">
+        <div className="lg:flex py-[36px]">
           {/* Product Image Section */}
-          <div className="flex border border-[#C1C1C1] bg-white w-[920px] ml-[5rem] mt-[1rem] h-[500px] rounded-[16px]">
+          <div className="flex border border-[#C1C1C1] bg-white lg:w-[920px] w-auto lg:ml-[5rem] mt-[1rem] lg:h-[500px] rounded-[16px]">
            <div>
             <div className="block ml-[2rem] space-y-[12px]">
                 <h1 className="font-poppins font-semibold text-[28px] mb-[2rem]  mt-[1.2rem]">Shipping Address</h1>
@@ -131,7 +131,7 @@ const Checkout = () => {
            <input className="w-[850px] h-[44px] px-[8px] border border-gray-300 rounded-[12px]" placeholder="23rd, Boulevard Ave"/>
           
             </div>
-            <div className="flex ml-[2rem] mt-[1rem] space-x-[50px]">
+            <div className="lg:flex ml-[2rem] mt-[1rem] space-x-[50px]">
            <div className="space-y-[16px]"> 
              <p className="font-poppins font-semibold">City</p>
            <input className="w-[250px] h-[44px] px-[8px] border border-gray-300 rounded-[12px]" placeholder="Enter City"/>
@@ -151,11 +151,11 @@ const Checkout = () => {
           </div>
 
           {/* Placeholder for Right Section */}
-          <div className="border border-[#C1C1C1] bg-white w-[440px] ml-[1.3rem] mt-[1rem] h-[450px] rounded-[16px]">
+          <div className="border border-[#C1C1C1] bg-white lg:w-[440px] lg:ml-[1.3rem] mt-[1rem] h-[450px] rounded-[16px]">
         <h1 className="font-poppins font-semibold text-[20px] px-[130px] py-[20px]"> Order Summary</h1>
         <hr/>
         <div className="flex">
-<div className="w-[100px] h-[100px] mt-[1rem] ml-[1rem] bg-[#F2F2F2] rounded-[12px]">
+<div className="lg:w-[100px] lg:h-[100px] mt-[1rem] ml-[1rem] bg-[#F2F2F2] rounded-[12px]">
     <img src="" className=""/>
 </div>
 <div className="ml-[1rem] mt-[1rem] block">
@@ -163,7 +163,7 @@ const Checkout = () => {
     <p className="text-[12px] text-gray-400">FENDI</p>
 </div>
         </div>
-        <div className="flex ml-[1rem] mt-[1.5rem] mb-[1rem] space-x-[290px]">
+        <div className="flex ml-[1rem] mt-[1.5rem] mb-[1rem] lg:space-x-[290px]">
             <div className="font-poppins text-gray-400 space-y-[12px]">
                 <p>Subtotal</p>
                 <p>Shipping</p>
@@ -181,18 +181,18 @@ const Checkout = () => {
 <p>Total</p>
 <p>$165</p>
         </div>
-        <button className="bg-[#FEA301] ml-[3rem] text-white w-[350px] h-[40px] rounded-md">Place order</button>
+        <button className="bg-[#FEA301] lg:ml-[3rem] text-white w-[350px] h-[40px] rounded-md">Place order</button>
            </div>
         </div>
         <div >
-           <div className="border border-[#C1C1C1] bg-white w-[1380px] ml-[5rem] mt-[0rem] h-[600px] rounded-[16px]">
+           <div className="border border-[#C1C1C1] bg-white lg:w-[1380px] lg:ml-[5rem] mt-[0rem] lg:h-[600px] rounded-[16px]">
 <div>
-<div className="flex flex-col items-center space-y-4">
+<div className="lg:flex block flex-col items-center space-y-4">
       {/* Buttons in flex layout */}
     
-      <div className=" ml-[-8rem] mt-[3rem]">
+      <div className=" lg:ml-[-8rem] mt-[3rem]">
        <h2 className="font-poppins font-semibold text-[24px]"> Payment method</h2>
-      <div className="flex space-x-[90px] mb-[2rem] ml-[4rem] mt-[2rem]">
+      <div className="flex lg:space-x-[90px] mb-[2rem] lg:ml-[4rem] mt-[2rem]">
         {Object.keys(items).map((category) => (
           <button
             key={category}
@@ -209,7 +209,7 @@ const Checkout = () => {
         ))}
       </div>
       {content && (
-        <div className=" w-[900px] mt-[2rem] mr-[4rem] p-[1rem] border border-[#C1C1C1]/[50%] leading-[38px] rounded-lg bg-[#F2F2F2]">
+        <div className=" lg:w-[900px] mt-[2rem] lg:mr-[4rem] p-[1rem] border border-[#C1C1C1]/[50%] leading-[38px] rounded-lg bg-[#F2F2F2]">
           <p>{content}</p>
         </div>
       )}
@@ -223,11 +223,11 @@ const Checkout = () => {
       {/*Footer section */}
       <div className="w-full bg-primary">
   {/* Logo and Social Icons */}
-  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-6">
+  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-12">
   
 
     {/* Footer Links */}
-    <div className="w-full md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+    <div className="w-full lg:ml-[45rem] md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
       {/* About Dropdown */}
       <div>
         <details className="md:hidden">
@@ -284,10 +284,10 @@ const Checkout = () => {
       </div>
       <hr/>
         {/* Logo */}
-    <div className="text-center md:text-left">
-      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[170px] w-[70px] mx-auto md:mx-0" />
-      <div className="flex justify-center md:justify-start space-x-4 mt-4">
-        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px] h-[22px]" />
+    <div className="text-center md:text-left ">
+      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[200px] lg:h-[80px] w-[70px] lg:ml-[-76rem] mx-auto md:mx-0" />
+      <div className="lg:flex sm:justify-center md:justify-start space-x-4 mt-4 ">
+        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px]  h-[22px] " />
         <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-[22px] h-[22px]" />
         <img src="/icons/x.png" alt="X" className="w-[22px] h-[22px]" />
       </div>

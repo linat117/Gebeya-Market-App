@@ -61,18 +61,18 @@ Rubber outsoles with good traction to prevent slips and falls.Built-in arch supp
   return (
     <>
       <Navbar />
-      <div className="bg-[#F2F2F2] w-full h-full py-[24px] overflow-x-hidden">
+      <div className="bg-[#F2F2F2] lg:w-full w-[320px] h-full py-[2px] overflow-x-hidden">
         {/* Breadcrumb */}
-        <div className="flex space-x-[10px] ml-[5rem] py-[18px]">
+        <div className="flex space-x-[10px] lg:ml-[5rem] ml-[1rem] py-[18px]">
           <p>Home</p> <p>&gt;</p> <p>Kids</p> <p>&gt;</p> <p>Shoes</p> <p>&gt;</p> <p>Sneakers</p>
         </div>
 
-        <div className="flex">
+        <div className="lg:flex block">
           {/* Product Image Section */}
-          <div className="flex border border-[#C1C1C1] bg-white w-[920px] ml-[5rem] mt-[1rem] h-[500px] rounded-[16px]">
+          <div className="lg:flex border border-[#C1C1C1] bg-white lg:w-[920px] w-auto lg:ml-auto ml-auto mt-[1rem] px-[1px] lg:h-[610px] rounded-[16px]">
             <div>
               {/* Large Image Display */}
-              <div className="w-[300px] h-[240px] ml-[1.2rem] mt-[1.2rem] rounded-[16px] bg-[#F2F2F2] flex items-center justify-center">
+              <div className="w-[300px] h-[240px] lg:ml-[1.2rem] mt-[1.2rem] rounded-[16px] bg-[#F2F2F2] flex items-center justify-center">
                 <img src={currentImage} alt="Selected" className="py-[14px] px-[32px]" />
               </div>
 
@@ -174,7 +174,7 @@ Rubber outsoles with good traction to prevent slips and falls.Built-in arch supp
           </div>
 
           {/* Placeholder for Right Section */}
-          <div className="border border-[#C1C1C1] bg-white w-[440px] ml-[1.3rem] mt-[1rem] h-[500px] rounded-[16px]">
+          <div className="border border-[#C1C1C1] bg-white lg:w-[440px] lg:ml-[1.3rem] mt-[1rem] lg:h-[500px] rounded-[16px]">
             <h1 className="font-poppins text-[24px] ml-[6rem] mt-[1rem] mb-[0.5rem] font-semibold">Delivery and returns</h1>
             <hr className="ml-[2rem] mr-[2rem]  "/>
             <p className="ml-[2rem]">Location:</p>
@@ -192,15 +192,15 @@ For details about return shipping options, please visit our Contact page</p>
           </div>
         </div>
         <div >
-           <div className="border border-[#C1C1C1] bg-white w-[1380px] ml-[5rem] mb-[4rem] mt-[2rem] h-[500px] rounded-[16px]">
+           <div className="border border-[#C1C1C1] bg-white lg:w-[1380px] w-auto lg:ml-auto mb-[4rem] mt-[2rem] lg:h-[500px] rounded-[16px] ">
 <div>
-<div className="flex flex-col items-start ml-[5rem] mt-[3rem]">
-      <div className="flex space-x-[36px] mb-[2rem]">
+<div className="lg:flex flex-col items-start lg:ml-[2rem] mt-[3rem]">
+      <div className="flex lg:space-x-[36px]  mb-[2rem]">
         {Object.keys(items).map((category) => (
           <button
             key={category}
             onClick={() => changeCategory(category)}
-            className={`w-[200px] h-[40px] border border-[#C1C1C1] rounded-[23px] transition-all 
+            className={`lg:w-[200px] w-[230px] lg:h-[40px] h-[45px] border border-[#C1C1C1] rounded-[23px] transition-all 
             ${
               activeCategory === category
                 ? "bg-[#FEA301] text-white"
@@ -212,7 +212,7 @@ For details about return shipping options, please visit our Contact page</p>
         ))}
       </div>
       {content && (
-        <div className="mt-[2rem] mr-[4rem] p-[1rem] border border-[#C1C1C1]/[50%] leading-[38px] rounded-lg bg-[#F2F2F2]">
+        <div className="mt-[2rem] lg:mr-auto p-[1rem] border border-[#C1C1C1]/[50%] leading-[38px] rounded-lg bg-[#F2F2F2]">
           <p>{content}</p>
         </div>
       )}
@@ -222,13 +222,13 @@ For details about return shipping options, please visit our Contact page</p>
         </div>
       </div>
       {/*Footer section */}
-      <div className="w-full bg-primary">
+      <div className="lg:w-full w-[320px] bg-primary">
   {/* Logo and Social Icons */}
-  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-6">
+  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-12">
   
 
     {/* Footer Links */}
-    <div className="w-full md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+    <div className="w-full lg:ml-[45rem] md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
       {/* About Dropdown */}
       <div>
         <details className="md:hidden">
@@ -285,10 +285,10 @@ For details about return shipping options, please visit our Contact page</p>
       </div>
       <hr/>
         {/* Logo */}
-    <div className="text-center md:text-left">
-      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[170px] w-[70px] mx-auto md:mx-0" />
-      <div className="flex justify-center md:justify-start space-x-4 mt-4">
-        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px] h-[22px]" />
+    <div className="text-center md:text-left ">
+      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[200px] lg:h-[80px] w-[70px] lg:ml-[-76rem] mx-auto md:mx-0" />
+      <div className="lg:flex sm:justify-center md:justify-start space-x-4 mt-4 ">
+        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px]  h-[22px] " />
         <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-[22px] h-[22px]" />
         <img src="/icons/x.png" alt="X" className="w-[22px] h-[22px]" />
       </div>

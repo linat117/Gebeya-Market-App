@@ -324,18 +324,18 @@ const Home = () => {
       <button className="bg-[#FEA301] mt-[2rem] ml-[0.8rem] h-[38px] w-[260px] rounded-[12px] text-white">Explore Now</button>
         </div>
     
-        <div className=""><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] lg:w-[1150px] sm:hidden ml-[rem]"/></div>
+        <div className=""><img src="/summer_advert.png" className=" h-[400px] rounded-[16px] lg:w-[1150px]  ml-[rem]"/></div>
       </div>
       <div>
-        <div className="lg:hidden w-[10px] h-[10px] rounded-full bg-[#FFD700] lg:mt-[-23.5rem] mt-[-17rem]  lg:ml-[35.6rem] ml-[20rem]"></div>
+        <div className="lg:hidden w-[10px] h-[10px] rounded-full bg-[#FFD700] lg:mt-[0rem] mt-[0rem]  lg:ml-[35.6rem] ml-[2rem]"></div>
 
-          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[2.6rem] mt-[1.9rem] lg:ml-[66rem] ml-[16rem]"></div>
-          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[0.6rem] mt-[3.5rem] lg:ml-[46rem] ml-[18rem] "></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[0rem] mt-[0rem] lg:ml-[66rem] ml-[16rem]"></div>
+          <div className="w-[22px] h-[22px] rounded-full bg-primary lg:mt-[0rem] mt-[0rem] lg:ml-[46rem] ml-[18rem] "></div>
           <div className="flex lg:mt-[6rem] lg:ml-[33.4rem]">   
-             <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] ml-[2rem] mt-[0.2rem] "></div>
-          <div className="lg:hidden w-[26px] h-[26px] rounded-full bg-[#FFD700] lg:ml-[12rem] ml-[5rem] mt-[2rem] "></div>
-          </div> <div className="w-[22px] h-[22px] rounded-full bg-primary lg:ml-[29rem] lg:mt-[5rem] mt-[4rem] lg:ml-[42rem] ml-[18rem] "></div>
-          <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] lg:ml-[58rem]  ml-[4rem]"></div>
+             <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] ml-[2rem] mt-[0rem] "></div>
+          <div className="lg:hidden w-[26px] h-[26px] rounded-full bg-[#FFD700] lg:ml-[12rem] ml-[0rem] mt-[0rem] "></div>
+          </div> <div className="w-[22px] h-[22px] rounded-full bg-primary lg:ml-[29rem] lg:mt-[0rem] mt-[0rem] lg:ml-[42rem] ml-[18rem] "></div>
+          <div className="w-[12px] h-[12px] rounded-full bg-primary/[49%] lg:ml-[58rem]  ml-[0rem]"></div>
        
         </div>
       </div>
@@ -382,11 +382,11 @@ const Home = () => {
       {/*Footer section */}
       <div className="w-full bg-primary">
   {/* Logo and Social Icons */}
-  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-6">
+  <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-8 md:px-32 py-12">
   
 
     {/* Footer Links */}
-    <div className="w-full md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
+    <div className="w-full lg:ml-[45rem] md:w-auto mt-8 md:mt-0 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16">
       {/* About Dropdown */}
       <div>
         <details className="md:hidden">
@@ -443,10 +443,10 @@ const Home = () => {
       </div>
       <hr/>
         {/* Logo */}
-    <div className="text-center md:text-left">
-      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[170px] w-[70px] mx-auto md:mx-0" />
-      <div className="flex justify-center md:justify-start space-x-4 mt-4">
-        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px] h-[22px]" />
+    <div className="text-center md:text-left ">
+      <img src="/img/footer-logo.png" alt="Footer Logo" className="lg:w-[200px] lg:h-[80px] w-[70px] lg:ml-[-76rem] mx-auto md:mx-0" />
+      <div className="lg:flex sm:justify-center md:justify-start space-x-4 mt-4 ">
+        <img src="/icons/insta.png" alt="Instagram" className="lg:w-[22px]  h-[22px] " />
         <img src="/icons/whatsapp.png" alt="WhatsApp" className="w-[22px] h-[22px]" />
         <img src="/icons/x.png" alt="X" className="w-[22px] h-[22px]" />
       </div>
