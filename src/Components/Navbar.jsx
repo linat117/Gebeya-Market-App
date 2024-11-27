@@ -142,7 +142,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="ml-[1rem] w-72 text-black focus:outline-none"
+            className="ml-[3rem] w-[60px] text-black focus:outline-none"
           />
         </div> <div className="lg:flex items-center md:hidden hidden   w-42 rounded-lg  px-3 py-2">
           <img src="icons/uk.png"/>
