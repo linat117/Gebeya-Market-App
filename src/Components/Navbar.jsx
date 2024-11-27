@@ -18,15 +18,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white w-full h-16 px-8 flex items-center justify-between">
-      {/* Logo
-      <div className="sm:hidden md:hidden lg:hidden">
-        <img src="/img/image.png" className=" w-8 h-8" alt="Logo" />
-      </div> */}
+    <div className="bg-white w-full h-16 px-8 flex items-center justify-between overflow-x-hidden">
+      {/* Logo*/}
+     
 
       {/* Navbar Links (visible on large screens) */}
-      <div className="hidden md:flex space-x-6">
-        <ul className="flex items-center space-x-6">
+      <div className="hidden lg:flex  space-x-6 ">
+      <div className="">
+       <a href="/"> <img src="/img/image.png" className=" w-8 h-8 ml-[1rem] mr-[1.3rem] " alt="Logo" /></a>
+      </div> 
+        <ul className="lg:flex items-center  space-x-6">
           <li>
             <button
               className="flex items-center space-x-2"
@@ -38,8 +39,8 @@ const Navbar = () => {
             {dropdownOpen && (
               <div className="absolute bg-white border border-gray-300 w-48 mt-2">
                 <ul>
-                  <li className="px-4 py-2"><a href="/Home" className="text-black">Register</a></li>
-                  <li className="px-4 py-2"><a href="#" className="text-black">Sign In</a></li>
+                  <li className="px-4 py-2"><a href="/" className="text-black">Register</a></li>
+                  <li className="px-4 py-2"><a href="/" className="text-black">Sign In</a></li>
                 </ul>
               </div>
             )}
@@ -71,13 +72,13 @@ const Navbar = () => {
         </ul>
       </div>
       
-      <div className="md:hidden flex items-center">
+      <div className=" lg:hidden flex items-center ">
      
         <button onClick={toggleMenu}>
-          <img src={isOpen ? "icons/Cancel.png" :"icons/Humberger.png"} className="w-8 h-8 " alt="Menu" /> 
+          <img src={isOpen ? "icons/Cancel.png" :"icons/Humberger.png"} className="w-8 h-8 lg:hidden  " alt="Menu" /> 
         </button>
         <div>
-       <a href="/"> <img src="/img/image.png" className="w-8 h-8 lg:ml-[2rem] ml-[1rem]" alt="Logo" /></a>
+       <a href="/"> <img src="/img/image.png" className="w-8 h-8  ml-[1rem] " alt="Logo" /></a>
       </div>
         
         {isOpen && (
@@ -124,6 +125,11 @@ const Navbar = () => {
               </div>
             )}
           </li>
+          <div className="flex items-center   w-42 rounded-lg  px-3 py-2">
+          <img src="icons/uk.png"/>
+          <p className="ml-[0.3rem]">EN/Currency</p>
+          <img src="icons/down.png"/>
+        </div>
             </ul>
           </div>
         )}
@@ -136,12 +142,16 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="ml-[1rem] w-32 text-black focus:outline-none"
+            className="ml-[1rem] w-68 text-black focus:outline-none"
           />
+        </div> <div className="lg:flex items-center md:hidden hidden   w-42 rounded-lg  px-3 py-2">
+          <img src="icons/uk.png"/>
+          <p className="ml-[0.3rem]">EN/Currency</p>
+          <img src="icons/down.png"/>
         </div>
         <div className="relative">
           <a href="/CartPage">
-            <img src="/icons/cart.png" className="w-12 h-12 rounded-full " alt="Cart" />
+            <img src="/icons/cart.png" className="w-12 h-12  rounded-full " alt="Cart" />
           </a>
         </div>
       </div>

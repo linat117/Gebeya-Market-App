@@ -61,7 +61,7 @@ Rubber outsoles with good traction to prevent slips and falls.Built-in arch supp
   return (
     <>
       <Navbar />
-      <div className="bg-[#F2F2F2] w-full h-full py-[24px]">
+      <div className="bg-[#F2F2F2] w-full h-full py-[24px] overflow-x-hidden">
         {/* Breadcrumb */}
         <div className="flex space-x-[10px] ml-[5rem] py-[18px]">
           <p>Home</p> <p>&gt;</p> <p>Kids</p> <p>&gt;</p> <p>Shoes</p> <p>&gt;</p> <p>Sneakers</p>

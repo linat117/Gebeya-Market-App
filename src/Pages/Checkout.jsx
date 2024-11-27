@@ -113,7 +113,7 @@ const Checkout = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F2F2F2] w-full py-[24px] h-full">
+      <div className="bg-[#F2F2F2] w-full py-[24px] h-full overflow-x-hidden">
         {/* Breadcrumb */}
        
 

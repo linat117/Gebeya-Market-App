@@ -152,13 +152,13 @@ const Home = () => {
             <div className=" lg:hidden bg-[#882BEC] w-full h-[500px] ">
 <div className="mt-[0rem] py-[24px]">
 
-    <span className="ml-[2rem] mt-[2rem]  font-alfa-slab text-[42px] font-regular  text-[#FFFFFF]">TIMBU</span>
+    <span className="ml-[2rem] md:ml-[7rem] mt-[2rem]  font-alfa-slab text-[42px] font-regular  text-[#FFFFFF]">TIMBU</span>
 </div>
 <div>
-<img src="/img/person.jpg" className="mt-[-1rem] ml-[5.2rem] w-[200px] h-[200px] rounded-full"/>
-<span className=" mt-[4rem] text-[42px] ml-[14rem] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
+<img src="/img/person.jpg" className="mt-[-1rem] ml-[5.2rem] md:ml-[15rem] w-[200px] h-[200px] rounded-full"/>
+<span className=" mt-[4rem] text-[42px] ml-[14rem] md:ml-[32rem] font-alfa-slab font-regular text-[#FFFFFF]">SHOP</span>
 
-<button className="bg-[#FEA301] w-[300px] h-[50px] mt-[3rem] ml-[1.7rem] "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
+<button className="bg-[#FEA301] w-[300px] md:w-[500px] h-[50px] mt-[3rem] ml-[1.7rem] md:ml-[7rem] "><span className="font-poppins h-[20px] text-[18px] font-medium">Explore Now</span></button>
 
 </div>
 <div className="block ml-[4rem] mr-[6rem] mt-[5rem]">
@@ -316,15 +316,15 @@ const Home = () => {
       </div>
 
       {/* Placeholder for Other Sections */}
-      <div className=" bg-[#D0D0D0] lg:w-[1380px] w-[315px] lg:h-[400px] h-[360px] lg:ml-[5rem] ml-[1.8rem] lg:mt-[4rem] mt-[2rem] rounded-[16px]">
+      <div className=" bg-[#D0D0D0] lg:w-[1380px] w-[315px] md:w-[740px] lg:h-[400px] h-[360px] lg:ml-[5rem] ml-[1.8rem] lg:mt-[4rem] mt-[2rem] rounded-[16px]">
         
-        <div className="flex"><div className=" lg:ml-[3rem] ml-[1rem] lg:mt-[1rem] mt-[1rem]"> 
+        <div className="flex"><div className=" lg:ml-[3rem]  ml-[1rem] lg:mt-[1rem] mt-[1rem]"> 
 <div className="font-poppins font-semibold lg:text-primary text-white lg:text-[40px] text-[18px]  lg:w-[450px] w-[200px]">Our Curated Summer Collection</div>
 <div className="font-poppins font-regular text-[16px]  lg:w-[360px] w-[280px] leading-[26px] lg:text-primary  text-white mt-[0.9rem]">Explore our curated summer collection featuring trending styles, vibrant colors and lightweight fabrics perfect for long days and nights.</div>
       <button className="bg-[#FEA301] mt-[2rem] ml-[0.8rem] h-[38px] w-[260px] rounded-[12px] text-white">Explore Now</button>
         </div>
     
-        <div className="hidden"><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] lg:w-[1150px] sm:hidden ml-[rem]"/></div>
+        <div className=""><img src="/summer_advert.png" className=" h-[400px]   rounded-[16px] lg:w-[1150px] sm:hidden ml-[rem]"/></div>
       </div>
       <div>
         <div className="lg:hidden w-[10px] h-[10px] rounded-full bg-[#FFD700] lg:mt-[-23.5rem] mt-[-17rem]  lg:ml-[35.6rem] ml-[20rem]"></div>
